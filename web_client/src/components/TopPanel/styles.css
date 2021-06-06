@@ -1,0 +1,151 @@
+/* @font-face {
+  font-family: 'myRiadPro';
+  src: url('../assets/font/myriadproregular.ttf')  format('truetype');
+ } */
+
+ .container {
+  /* flex-basis: auto; */
+  /* flex-flow: column wrap; */
+  /* flex-direction: row; */
+  /* margin: 10px; */
+  /* position: relative; */
+  display: flex;
+  /* background-color: #233F67; */
+  align-items: stretch;
+
+  /* flex-flow: wrap; */
+  /* Then we define how is distributed the remaining space */
+  /* justify-content: stretch; */
+}
+
+.logginYourId {
+  color: #233F67;
+  font-family: myRiadPro;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.inputWithValidationNormal {
+  height: 36px;
+  width: 192px;
+  background-color: white;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 6px;
+  color: #233F67;
+  font-family: myRiadPro;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.inputWithValidationError {
+  height: 36px;
+  width: 192px;
+  outline: none;
+  border: 2px solid #F26E7C;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #ede2e6;
+  color: #F26E7C;
+  font-family: myRiadPro;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.logginYourIdRow {
+  flex-grow: 1;
+  margin: 15px;
+  align-items: stretch;
+}
+
+.logginButtonNoActive {
+  height: 35px;
+  flex-grow: 1;
+  border-radius: 6px;
+  outline: none;
+  border-color: transparent;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #233F67;
+  background: #e0e3e8;
+  font-family: myRiadPro;
+}
+
+.logginButtonActive {
+  height: 35px;
+  flex-grow: 1;
+  border-radius: 6px;
+  outline: none;
+  border-color: transparent;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  background: #233F67;
+  font-family: myRiadPro;
+}
+
+.logginYouIdLabel {
+  color: #233F67;
+  font-weight: normal;
+  font-size: 14px;
+  font-family: myRiadPro;
+}
+
+.topPanel {
+  height: 60px;
+  width: 100px;
+  color: #233F67;
+  display: flex;
+  background-color: #233F67;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: auto;
+  justify-content: left;
+}
+
+.topLineMargin {
+  margin-left: 10px;
+  align-self: center;
+  color: white;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topLinePointIndicatorOffline {
+  height: 6px;
+  width: 6px;
+  margin-left: 10px;
+  align-self: center;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: red;
+}
+
+.topLinePointIndicatorConnecting {
+  height: 6px;
+  width: 6px;
+  margin-left: 10px;
+  align-self: center;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: yellow;
+}
+
+.topLinePointIndicatorOnline {
+  height: 6px;
+  width: 6px;
+  margin-left: 10px;
+  align-self: center;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: green;
+}

@@ -1,0 +1,6 @@
+/web_client/node_modules/*
+/server/node_modules/*
+*.DS_Store
+.idea
+/venv/*
+/db_service/summary_out.txt
