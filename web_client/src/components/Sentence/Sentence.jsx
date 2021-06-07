@@ -19,7 +19,7 @@ class Sentence extends Component {
     return (
       <p className={'sentence'}>
         {this.state.message.left_part_of_sentence}
-        <span className={'emphasis'}>{this.state.message.key_sentence}</span>
+        <mark className={'emphasis'}>{this.state.message.key_sentence}</mark>
         {this.state.message.right_part_of_sentence}
       </p> 
     );
