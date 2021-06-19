@@ -3,6 +3,7 @@ import { sendMsg } from './api/index';
 import Input from './components/Input/Input'
 import Sentence from './components/Sentence/Sentence';
 import TopPanel from './components/TopPanel/TopPanel';
+import AdviceToStart from './components/AdviceToStart/AdviceToStart'
 
 class App extends Component {
   constructor(props) {
@@ -17,9 +18,7 @@ class App extends Component {
   }
 
   sendReqeust(event) {
-    console.log('sendReqeust: ' + event.target.value)
     sendMsg(event.target.value, (res)=> {
-      console.log('res:' + res)
       this.setState({items: res});
     })
   }
@@ -56,8 +55,9 @@ class App extends Component {
       return (
         <div>
           <TopPanel/>
-          <Input send={this.sendReqeust}/>
-
+          <Input className="InputField" send={this.sendReqeust}/>
+          
+          <AdviceToStart visible={this.state.items.length == 0 }/>
           <div>
             {items.map(((item) => (
               <Sentence className="post" key={item.number} message={item}/>

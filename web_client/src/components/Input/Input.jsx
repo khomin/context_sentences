@@ -16,7 +16,7 @@ class Input extends Component {
   }
 
   handleOnEnter(event) {
-    if (event.charCode === 13) {
+    if (event.charCode === 13 && event.target.value != "") {
       console.log(event.target.value)
       this.props.send(event);
     }
