@@ -7,11 +7,11 @@ class SourceStorage:
         self.list_of_files = []
 
         for i in list_of_all:
-            if (len(i) > 5) and (not i.__contains__('.DS_Store')):
+            if (not i.__contains__('.DS_Store')):
                 self.list_of_files.append(i)
 
-    def getSize(self):
+    def get_size(self):
         return len(self.list_of_files)
 
-    def getItems(self):
+    def get_items(self):
         return self.list_of_files

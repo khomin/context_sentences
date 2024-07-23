@@ -4,3 +4,5 @@
 .idea
 /venv/*
 /db_service/summary_out.txt
+summary_out.txt
+sqlite.db

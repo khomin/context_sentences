@@ -9,8 +9,14 @@ class Db:
     def create_connection(self, db_file):
         try:
             self.conn = sqlite3.connect(db_file)
-            self.conn.execute('DELETE FROM Texts')
-            self.conn.execute('CREATE TABLE IF NOT EXISTS Texts (id INTEGER PRIMARY KEY, body TEXT)')
+            try:
+                self.conn.execute('DELETE FROM Texts')
+            except Error as e:
+                print(e)
+            try:
+                self.conn.execute('CREATE TABLE IF NOT EXISTS Texts (id INTEGER PRIMARY KEY, body TEXT)')
+            except Error as e:
+                print(e)
             self.conn.commit()
         except Error as e:
             print(e)
@@ -34,7 +40,7 @@ class Db:
         except Error as e:
             print(e)
 
-    def insertTextSentence(self, text):
+    def insert_text_sentence(self, text):
         try:
             self.conn.execute('INSERT INTO Texts(body) values(?)', (text,))
             self.conn.commit()
