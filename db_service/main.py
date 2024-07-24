@@ -1,4 +1,4 @@
-from fill_db import FillDb
+from fill_db import Fill_DB
 
 from source_storage import SourceStorage
 
@@ -13,7 +13,7 @@ if sources_len == 0:
 else:
     print("sources_len size: " + str(sources_len))
 
-    fill_db = FillDb()
+    fill_db = Fill_DB()
     number_of_lines = fill_db.start(source_storage)
 
     print("fill database done, number of lines: " + str(number_of_lines))
