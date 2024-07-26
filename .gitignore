@@ -3,6 +3,7 @@
 *.DS_Store
 .idea
 /venv/*
-/db_service/summary_out.txt
+/data_sources/*.*
+/summary/*.*
 summary_out.txt
 sqlite.db

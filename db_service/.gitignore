@@ -3,7 +3,6 @@ logs
 *.log
 
 /venv
-/data_sources/
 *.db
 
 # Runtime data

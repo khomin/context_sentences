@@ -21,13 +21,12 @@ class Fill_DB:
                 print("this book contains keywords: " + it)
                 entire = self.__format(raw_entire)
 
-                self.__write_summary(entire)
+                self.__write_summary(entire, it)
 
                 if self.db.open_connection(os.getcwd() + '/sqlite.db'):
                     try:
                         for it_line in tqdm(entire):
-                            for it_line_one in it_line:
-                                self.db.insert_text_sentence(it_line_one)
+                            self.db.insert_text_sentence(it_line)
                         print('\n')
                     finally:
                         self.db.close_connection()
@@ -119,8 +118,8 @@ class Fill_DB:
                     None
         return found_cnt != 0
     
-    def __write_summary(self, entire):
-        with open(os.getcwd() + '/summary_out.txt', "w") as echo_file:
+    def __write_summary(self, entire, name):
+        with open(os.getcwd() + '/summary/' + name, "w") as echo_file:
             echo_file.truncate(0)
             for line in entire:
                 echo_file.write(line + '\n')
